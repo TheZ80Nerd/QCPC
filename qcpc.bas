@@ -10,10 +10,10 @@
 35 print
 40 print "c64 quantum simulator"
 45 print "created by davide gessa (dakk)"
-46 PRINT "Amstrad CPC version by TheZ80Nerd":print
-50 print "enter gate seq (x0,x1,y0,y1,z0,z1,h0,h1,cx,sw)":print "? ";
+46 print "Amstrad CPC version by TheZ80Nerd" : print
+50 print "enter gate seq (x0,x1,y0,y1,z0,z1,h0,h1,cx,sw)" : print "? ";
 60 line input g$
-65 print:print "calculating the statevector...";
+65 print : print "calculating the statevector...";
 70 for i = 1 to len(g$) step 2
 80  gate$ = mid$(g$, i, 2)
 90  gosub 200
@@ -39,11 +39,11 @@
 144  if r >= p2 and r < p3 then z3 = z3 + 1
 146 next i
 
-150 print "results:"
-155 print "00: [ ";:print using "**";z0;:print " ] "; :print chr$(207); : for i = 2 to z0 : print chr$(207); : next i : print
-160 print "10: [ ";:print using "**";z1;:print " ] "; :print chr$(207); : for i = 1 to z1 : print chr$(207); : next i : print
-165 print "01: [ ";:print using "**";z2;:print " ] "; :print chr$(207); : for i = 2 to z2 : print chr$(207); : next i : print 
-170 print "11: [ ";:print using "**";z3;:print " ] "; :print chr$(207); : for i = 1 to z3 : print chr$(207); : next i : print
+150 print : print "results:"
+155 print "00: [ "; : print using "**";z0; : print " ] "; : print chr$(207); : for i = 2 to z0 : print chr$(207); : next i : print
+160 print "10: [ "; : print using "**";z1; : print " ] "; : print chr$(207); : for i = 2 to z1 : print chr$(207); : next i : print
+165 print "01: [ "; : print using "**";z2; : print " ] "; : print chr$(207); : for i = 2 to z2 : print chr$(207); : next i : print 
+170 print "11: [ "; : print using "**";z3; : print " ] "; : print chr$(207); : for i = 2 to z3 : print chr$(207); : next i : print
 175 goto 1000
 
 200 rem simulate gate operation
