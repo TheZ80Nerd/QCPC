@@ -1,5 +1,5 @@
 05 rem r* are real parts and i* are imagenary parts of the sv
-06 mode 0
+06 mode 1
 07 randomize time
 08 border 14
 10 r0 = 1 : i0 = 0 : r1 = 0 : i1 = 0
