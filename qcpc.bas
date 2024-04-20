@@ -7,12 +7,13 @@
 20 a0 = 0
 25 shots = 28
 30 cls
+35 print
 40 print "c64 quantum simulator"
 45 print "created by davide gessa (dakk)"
-46 PRINT "Amstrad CPC version by TheZ80Nerd"
+46 PRINT "Amstrad CPC version by TheZ80Nerd":print
 50 print "enter gate seq (x0,x1,y0,y1,z0,z1,h0,h1,cx,sw)":print "? ";
 60 line input g$
-65 print "calculating the statevector...";
+65 print:print "calculating the statevector...";
 70 for i = 1 to len(g$) step 2
 80  gate$ = mid$(g$, i, 2)
 90  gosub 200
