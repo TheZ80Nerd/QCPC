@@ -1,4 +1,4 @@
-# QC64 - Quantum Simulator for the Commodore 64
+# QCPC - Quantum Simulator for the Amtrad CPC
 
 QC64 is an experimental quantum computing simulator for the Commodore 64, written in pure BASIC.
 
