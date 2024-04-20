@@ -8,7 +8,7 @@
 25 shots = 28
 30 cls
 35 print
-40 print "c64 quantum simulator"
+40 print "qc64 quantum simulator"
 45 print "created by davide gessa (dakk)"
 46 print "Amstrad CPC version by TheZ80Nerd" : print
 50 print "enter gate seq (x0,x1,y0,y1,z0,z1,h0,h1,cx,sw)" : print "? ";
