@@ -1,8 +1,7 @@
-# QCPC - Quantum Simulator for the Amtrad CPC
+# QCPC - Quantum Simulator for the Amstrad CPC
 
-QC64 is an experimental quantum computing simulator for the Commodore 64, written in pure BASIC.
-
-![Creating a Bell State on Commodore 64](images/qc64_bellstate.gif)
+QCPC is an experimental quantum computing simulator for the Amstrad CPC, written in pure BASIC.
+This is a port of qc64 project by Davide Gessa (dakk) https://github.com/dakk/qc64
 
 ## Features
 
