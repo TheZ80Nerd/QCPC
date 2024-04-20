@@ -3,6 +3,8 @@
 QCPC is an experimental quantum computing simulator for the Amstrad CPC, written in pure BASIC.
 This is a port of qc64 project by Davide Gessa (dakk) https://github.com/dakk/qc64
 
+![Creating a Bell State on Amstrad CPC](images/qcpc.png)
+
 ## Features
 
 -    Simulate operations of various quantum gates including Pauli-X, Pauli-Y, Pauli-Z, Hadamard, CNOT, and SWAP on a two-qubit system.
