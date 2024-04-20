@@ -1,13 +1,17 @@
 05 rem r* are real parts and i* are imagenary parts of the sv
+06 mode 0
+07 randomize time
+08 border 14
 10 r0 = 1 : i0 = 0 : r1 = 0 : i1 = 0
 15 r2 = 0 : i2 = 0 : r3 = 0 : i3 = 0
 20 a0 = 0
 25 shots = 28
-30 print chr$(147)
+30 cls
 40 print "c64 quantum simulator"
 45 print "created by davide gessa (dakk)"
-50 print "enter gate seq (x0,x1,y0,y1,z0,z1,h0,h1,cx,sw)"
-60 input g$
+46 PRINT "Amstrad CPC version by TheZ80Nerd"
+50 print "enter gate seq (x0,x1,y0,y1,z0,z1,h0,h1,cx,sw)":print "? ";
+60 line input g$
 65 print "calculating the statevector...";
 70 for i = 1 to len(g$) step 2
 80  gate$ = mid$(g$, i, 2)
@@ -16,8 +20,8 @@
 100 next i
 101 print
 
-102 sq = r0*r0 + i0*i0 + r1*r1 + i1*i1 + r2*r2 + i2*i2 + r3*r3 + i3*i3
-103 if abs(sq - 1) > 0.00001 then gosub 600
+102 sqx = r0*r0 + i0*i0 + r1*r1 + i1*i1 + r2*r2 + i2*i2 + r3*r3 + i3*i3
+103 if abs(sqx - 1) > 0.00001 then gosub 600
 
 105 print "running" shots "iterations..."
 110 z0 = 0 : z1 = 0 : z2 = 0 : z3 = 0
@@ -27,7 +31,7 @@
 130 p3 = (r3 * r3 + i3 * i3) + p2
 
 135 for i = 1 to shots
-140  r = rnd(0)
+140  r = rnd
 141  if r < p0 then z0 = z0 + 1
 142  if r >= p0 and r < p1 then z1 = z1 + 1
 143  if r >= p1 and r < p2 then z2 = z2 + 1
@@ -35,10 +39,10 @@
 146 next i
 
 150 print "results:"
-155 print "00: ["z0"] "; : for i = 1 to z0 : print "Q"; : next i : print
-165 print "01: ["z2"] "; : for i = 1 to z2 : print "Q"; : next i : print 
-160 print "10: ["z1"] "; : for i = 1 to z1 : print "Q"; : next i : print
-170 print "11: ["z3"] "; : for i = 1 to z3 : print "Q"; : next i : print
+155 print "00: [ ";:print using "**";z0;:print " ] "; :print chr$(207); : for i = 2 to z0 : print chr$(207); : next i : print
+160 print "10: [ ";:print using "**";z1;:print " ] "; :print chr$(207); : for i = 1 to z1 : print chr$(207); : next i : print
+165 print "01: [ ";:print using "**";z2;:print " ] "; :print chr$(207); : for i = 2 to z2 : print chr$(207); : next i : print 
+170 print "11: [ ";:print using "**";z3;:print " ] "; :print chr$(207); : for i = 1 to z3 : print chr$(207); : next i : print
 175 goto 1000
 
 200 rem simulate gate operation
@@ -66,6 +70,7 @@
 426 a0 = i1 : i1 = i3 : i3 = a0
 427 a0 = r0 : r0 = r2 : r2 = a0
 428 a0 = i0 : i0 = i2 : i2 = a0
+429 return
 
 440 rem y0 gate
 446 a0 = i0 : i0 = -r0 : r0 = a0
@@ -116,7 +121,7 @@
 590 return
 
 600 rem statevcector normalization
-601 nf = sqr(1 / sq)
+601 nf = sqr(1 / sqx)
 602 r0 = r0 * nf
 603 i0 = i0 * nf
 604 r1 = r1 * nf
@@ -127,4 +132,4 @@
 609 i3 = i3 * nf
 610 return
 
-1000 end
+1000 print "END":PRINT:END
