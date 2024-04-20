@@ -11,14 +11,14 @@ This is a port of qc64 project by Davide Gessa (dakk) https://github.com/dakk/qc
 
 ## How it works
 
-Starting from the initial state |00>, the simulator can apply various quantum gates to manipulate the state of the two-qubit system. This allows for the simulation of various quantum computing concepts right on your Commodore 64!
+Starting from the initial state |00>, the simulator can apply various quantum gates to manipulate the state of the two-qubit system. This allows for the simulation of various quantum computing concepts right on your Amstrad CPC!
 
 
 ## Contributions
 
-Contributions to QC64 are welcome! Feel free to create a pull request or open an issue if you have ideas for improvements or spot any bugs.
+Contributions to QCPC are welcome! Feel free to create a pull request or open an issue if you have ideas for improvements or spot any bugs.
 
 ## License
 
-QC64 is released under MIT License.
+QCPC is released under MIT License.
 Let's Rekindle the Magic of Vintage Computing!
