@@ -1,7 +1,7 @@
 # QCPC - Quantum Simulator for the Amstrad CPC
 
 QCPC is an experimental quantum computing simulator for the Amstrad CPC, written in pure BASIC.
-Ported and tested on a real Amstrad CPC 464 with 64K RAM and a fancy green monitor.
+Tested on a real Amstrad CPC 464 with 64K RAM and a fancy green monitor.
 This is a port of qc64 project by Davide Gessa (dakk) https://github.com/dakk/qc64
 
 ![Creating a Bell State on Amstrad CPC](images/qcpc.png)
